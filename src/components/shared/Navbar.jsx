@@ -4,9 +4,9 @@ import { motion } from "motion/react";
 function Navigation({ onLinkClick }) {
   const links = [
     { label: "Home", href: "#home" },
+    { label: "Experience", href: "#experience" },
     { label: "About", href: "#about" },
     { label: "Projects", href: "#projects" },
-    { label: "Experience", href: "#experience" },
     { label: "Skills", href: "#skill" },
     { label: "Contact", href: "#contacts" },
   ];
@@ -16,7 +16,7 @@ function Navigation({ onLinkClick }) {
       {links.map((link) => (
         <li className="nav-li" key={link.href}>
           <a
-            className="nav-link text-black"
+            className="hover-underline "
             href={link.href}
             onClick={(e) => onLinkClick(e, link.href)}
           >
@@ -49,7 +49,7 @@ const Navbar = () => {
         behavior: "smooth",
         block: "start",
       });
-      setIsOpen(false); // close mobile menu after navigation
+      setIsOpen(false);
     }
   };
 
@@ -63,10 +63,11 @@ const Navbar = () => {
         <div className="flex items-center justify-between py-2 sm:py-0">
           <a
             href="/"
-            className="text-xl font-bold transition-colors hover:text-white"
+            className="text-xl font-bold transition-transform duration-300 ease-in-out transform hover:scale-105 hover:bg-gradient-to-br hover:from-[#c0e853] hover:to-[#a2d81b] hover:bg-clip-text hover:text-transparent"
           >
             Sayed Anwar
           </a>
+
           <button
             onClick={() => setIsOpen(!isOpen)}
             className="flex cursor-pointer hover:text-white focus:outline-none sm:hidden"

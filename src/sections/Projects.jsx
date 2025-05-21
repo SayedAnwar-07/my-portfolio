@@ -36,7 +36,7 @@ const Projects = () => {
           >
             My Projects
           </motion.h2>
-          <div className="w-32 h-1 bg-green mx-auto mt-4 rounded-full"></div>
+          <div className="w-40 h-1 bg-green mx-auto mt-4 rounded-full"></div>
           <motion.p
             className="text-gray-600 mt-4 max-w-2xl mx-auto"
             initial={{ opacity: 0 }}

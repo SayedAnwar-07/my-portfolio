@@ -12,7 +12,7 @@ const About = () => {
       <section className="c-space section-spacing">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-black">About Me</h2>
-          <div className="w-32 h-1 bg-[#878f6f] mx-auto mt-4"></div>
+          <div className="w-32 h-1 bg-green mx-auto mt-4"></div>
           <p className="text-gray-600 mt-4 max-w-2xl mx-auto">
             Passionate developer with a creative mindset and problem-solving
             approach. I believe in building solutions that are not just

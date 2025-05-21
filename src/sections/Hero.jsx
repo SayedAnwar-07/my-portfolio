@@ -5,7 +5,7 @@ import { Typewriter } from "react-simple-typewriter";
 
 const Hero = () => {
   return (
-    <div className="container mx-auto">
+    <div id="home" className="container mx-auto">
       <section
         id="hero"
         className="min-h-screen w-full flex items-center justify-center relative overflow-hidden pt-16"

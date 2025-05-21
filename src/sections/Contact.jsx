@@ -72,7 +72,7 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="py-16 md:py-24">
+    <section id="contacts" className="py-16 md:py-24">
       <div className="section-container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial="hidden"
@@ -89,7 +89,7 @@ const Contact = () => {
           </motion.h2>
           <motion.div
             variants={itemVariants}
-            className="w-24 h-1.5 bg-green mx-auto mt-4 rounded-full"
+            className="w-40 h-1 bg-green mx-auto mt-4 rounded-full"
           ></motion.div>
           <motion.p
             variants={itemVariants}

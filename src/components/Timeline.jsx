@@ -64,7 +64,7 @@ export const Timeline = ({ data }) => {
           initial={{ scaleX: 0 }}
           animate={{ scaleX: 1 }}
           transition={{ delay: 0.3, duration: 0.6 }}
-          className="w-32 h-1 bg-green mx-auto mt-4 origin-left"
+          className="w-60 h-1 bg-green mx-auto mt-4 origin-left"
         />
         <motion.p
           initial={{ opacity: 0 }}

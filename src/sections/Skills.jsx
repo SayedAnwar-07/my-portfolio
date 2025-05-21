@@ -26,7 +26,7 @@ export default function Skills() {
       <div className="items-start mt-25 md:mt-35 c-space">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-black">Technologies I Use</h2>
-          <div className="w-32 h-1 bg-green mx-auto mt-4"></div>
+          <div className="w-64 h-1 bg-green mx-auto mt-4"></div>
           <p className="text-gray-600 mt-4 max-w-2xl mx-auto">
             A diverse toolkit to tackle any challenge. Here are the technologies
             and methodologies I specialize in.

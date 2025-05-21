@@ -1,11 +1,11 @@
 import Navbar from "./components/shared/Navbar";
-import Hero from "./pages/Hero";
-import About from "./pages/About";
-import Projects from "./pages/Projects";
-import Experiences from "./pages/Experiences";
-import Contact from "./pages/Contact";
+import Hero from "./sections/Hero";
+import About from "./sections/About";
+import Projects from "./sections/Projects";
+import Experiences from "./sections/Experiences";
+import Contact from "./sections/Contact";
 import Footer from "./components/shared/Footer";
-import Skills from "./pages/Skills";
+import Skills from "./sections/Skills";
 
 const App = () => {
   return (
