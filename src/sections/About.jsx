@@ -2,32 +2,73 @@ import { useRef } from "react";
 import Card from "../components/about/Card";
 import { Globe } from "../components/about/globe";
 import { Frameworks } from "../components/FrameWorks";
+import { motion } from "framer-motion";
 import "./About.css";
 
 const About = () => {
   const grid2Container = useRef();
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1,
+        delayChildren: 0.3,
+      },
+    },
+  };
+
+  const itemVariants = {
+    hidden: { y: 20, opacity: 0 },
+    visible: {
+      y: 0,
+      opacity: 1,
+      transition: {
+        duration: 0.5,
+        ease: "easeOut",
+      },
+    },
+  };
 
   return (
     <div className="container mx-auto" id="about">
       <section className="c-space section-spacing">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-black">About Me</h2>
-          <div className="w-32 h-1 bg-green mx-auto mt-4"></div>
-          <p className="text-gray-600 mt-4 max-w-2xl mx-auto">
+        {/* Header */}
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-100px" }}
+          variants={containerVariants}
+          className="text-center mb-12 md:mb-16"
+        >
+          <motion.h2
+            variants={itemVariants}
+            className="text-3xl sm:text-4xl font-bold text-gray-900"
+          >
+            About Me
+          </motion.h2>
+          <motion.div
+            variants={itemVariants}
+            className="w-40 h-1 bg-green mx-auto mt-4 rounded-full"
+          ></motion.div>
+          <motion.p
+            variants={itemVariants}
+            className="text-gray-600 mt-6 max-w-2xl mx-auto text-lg"
+          >
             Passionate developer with a creative mindset and problem-solving
             approach. I believe in building solutions that are not just
             functional but delightful to use.
-          </p>
-        </div>
+          </motion.p>
+        </motion.div>
         <div className="grid grid-cols-1 gap-4 md:grid-cols-6 md:auto-rows-[18rem] mt-12">
           {/* Grid 1 */}
-          <div className="flex items-end grid-default-color border border-gray-200 grid-1">
+          <div className="flex items-end p-6 bg-gradient-to-b from-gray-400 to-gray-700 rounded-2xl border border-gray-200 grid-1">
             <img
-              src="assets/coding-pov.png"
-              className="absolute scale-[1.75] -right-[5rem] -top-[1rem] md:scale-[3] md:left-50 md:inset-y-10 lg:scale-[2.5]"
+              src="assets/coding3.webp"
+              className="absolute scale-[1.75] -right-[5rem] -top-[1rem] md:scale-[3] md:left-50 md:inset-y-10 lg:scale-[2.5] opacity-50"
             />
             <div className="z-10">
-              <p className="headtext">
+              <p className="text-gray-300 ">
                 Hi, I'm <strong>Sayed Anwar</strong>{" "}
               </p>
               <p className="subtext">

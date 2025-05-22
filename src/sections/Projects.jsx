@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useCallback } from "react";
 import Project from "../components/projects/Project";
 import { myProjects } from "../constants";
 import { motion, useMotionValue, useSpring } from "framer-motion";
@@ -9,12 +9,38 @@ const Projects = () => {
   const springX = useSpring(x, { damping: 20, stiffness: 150 });
   const springY = useSpring(y, { damping: 20, stiffness: 150 });
 
-  const handleMouseMove = (e) => {
-    x.set(e.clientX + 20);
-    y.set(e.clientY + 20);
-  };
+  const handleMouseMove = useCallback(
+    (e) => {
+      x.set(e.clientX + 20);
+      y.set(e.clientY + 20);
+    },
+    [x, y]
+  );
 
   const [preview, setPreview] = useState(null);
+
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1,
+        delayChildren: 0.3,
+      },
+    },
+  };
+
+  const itemVariants = {
+    hidden: { y: 20, opacity: 0 },
+    visible: {
+      y: 0,
+      opacity: 1,
+      transition: {
+        duration: 0.5,
+        ease: "easeOut",
+      },
+    },
+  };
 
   return (
     <div className="container mx-auto px-4 sm:px-6 lg:px-8" id="projects">
@@ -23,61 +49,51 @@ const Projects = () => {
         className="relative section-spacing"
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
+        viewport={{ once: true, margin: "100px" }}
         transition={{ duration: 0.6, ease: "easeOut" }}
       >
         {/* Header */}
-        <div className="text-center mb-16">
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-100px" }}
+          variants={containerVariants}
+          className="text-center mb-12 md:mb-16"
+        >
           <motion.h2
-            className="text-4xl font-bold text-black"
-            initial={{ opacity: 0, y: -20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.1 }}
+            variants={itemVariants}
+            className="text-3xl sm:text-4xl font-bold text-gray-900"
           >
             My Projects
           </motion.h2>
-          <div className="w-40 h-1 bg-green mx-auto mt-4 rounded-full"></div>
+          <motion.div
+            variants={itemVariants}
+            className="w-40 h-1 bg-green mx-auto mt-4 rounded-full"
+          ></motion.div>
           <motion.p
-            className="text-gray-600 mt-4 max-w-2xl mx-auto"
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            transition={{ delay: 0.2 }}
+            variants={itemVariants}
+            className="text-gray-600 mt-6 max-w-2xl mx-auto text-lg"
           >
             A collection of my work that demonstrates my skills, creativity, and
             problem-solving abilities.
           </motion.p>
-        </div>
+        </motion.div>
 
         {/* Separator */}
         <div className="bg-gradient-to-r from-transparent via-neutral-700 to-transparent mt-12 h-[1px] w-full" />
-
-        {/* Projects */}
-        <motion.div
-          className="mt-12 grid gap-10"
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          variants={{
-            visible: {
-              transition: {
-                staggerChildren: 0.15,
-              },
-            },
-          }}
-        >
+        <div className="mt-12 grid gap-10">
           {myProjects.map((project) => (
             <motion.div
               key={project.id}
-              variants={{
-                hidden: { opacity: 0, y: 30 },
-                visible: { opacity: 1, y: 0 },
-              }}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "50px" }}
               transition={{ duration: 0.5, ease: "easeOut" }}
             >
               <Project {...project} setPreview={setPreview} />
             </motion.div>
           ))}
-        </motion.div>
+        </div>
 
         {/* Preview Hover Image */}
         {preview && (
