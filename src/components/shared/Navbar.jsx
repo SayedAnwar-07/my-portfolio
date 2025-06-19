@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { RiMenu3Line } from "react-icons/ri";
 import { IoCloseSharp } from "react-icons/io5";
 
+// eslint-disable-next-line react/prop-types
 function Navigation({ onLinkClick }) {
   const links = [
     { label: "Home", href: "#home" },
@@ -91,12 +92,20 @@ const Navbar = () => {
     >
       <div className="mx-auto c-space max-w-7xl">
         <div className="flex items-center justify-between py-2 sm:py-0">
-          <a
-            href="/"
-            className="text-xl font-bold transition-transform duration-300 ease-in-out transform hover:scale-105 hover:bg-gradient-to-br hover:from-[#c0e853] hover:to-[#a2d81b] hover:bg-clip-text hover:text-transparent"
-          >
-            Sayed Anwar
-          </a>
+          
+          <div className="button">
+            <div className="box">S</div>
+            <div className="box">a</div>
+            <div className="box">y</div>
+            <div className="box">e</div>
+            <div className="box">d</div>
+            <div className="box"> </div>
+            <div className="box">A</div>
+            <div className="box">n</div>
+            <div className="box">w</div>
+            <div className="box">a</div>
+            <div className="box">r</div>
+          </div>
 
           <button
             onClick={() => setIsOpen(!isOpen)}

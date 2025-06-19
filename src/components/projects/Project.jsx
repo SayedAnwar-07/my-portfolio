@@ -66,6 +66,7 @@ const Project = ({
           title={title}
           description={description}
           subDescription={subDescription}
+          img
           image={image}
           tags={tags}
           href={href}

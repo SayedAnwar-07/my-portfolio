@@ -57,7 +57,7 @@ const ProjectDetails = ({
             whileTap={{ scale: 0.95 }}
             transition={{ type: "spring", stiffness: 400, damping: 10 }}
           >
-            <img src="assets/close.svg" alt="Close" className="w-6 h-6" />
+            <img src="assets/close.webp" alt="Close" className="w-6 h-6" />
           </motion.button>
 
           {/* Image */}

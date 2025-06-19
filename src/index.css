@@ -1,5 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&display=swap");
+
 @import "tailwindcss";
+@plugin "daisyui";
+
 @theme {
   --color-primary: #030412;
   --color-midnight: #06091f;
@@ -219,4 +222,95 @@ body {
 
 .field-input-focus {
   @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/20;
+}
+
+/* From Uiverse.io by mrhyddenn - fixed version */
+.button {
+  display: flex;
+}
+
+.box {
+  width: 20px;
+  border: 1px solid #ffffff00;
+  height: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 15px;
+  font-weight: 700;
+  color: #fff;
+  transition: all .8s;
+  cursor: pointer;
+  position: relative;
+  background: #abdd2c;
+  overflow: hidden;
+}
+
+.box:before {
+  content: "S";
+  position: absolute;
+  top: 0;
+  background: #0f0f0f;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translateY(100%);
+  transition: transform .4s;
+}
+
+.box:nth-child(2)::before {
+  content: 'a';
+  transform: translateY(-100%);
+}
+
+.box:nth-child(3)::before {
+  content: 'y';
+  transform: translateY(100%);
+}
+
+.box:nth-child(4)::before {
+  content: 'e';
+  transform: translateY(-100%);
+}
+
+.box:nth-child(5)::before {
+  content: 'd';
+  transform: translateY(100%);
+}
+
+.box:nth-child(6)::before {
+  background: #f1f1ea;
+  content: '';
+  transform: translateY(-100%);
+}
+
+.box:nth-child(7)::before {
+  content: 'A';
+  transform: translateY(100%);
+}
+
+.box:nth-child(8)::before {
+  content: 'n';
+  transform: translateY(-100%);
+}
+
+.box:nth-child(9)::before {
+  content: 'w';
+  transform: translateY(100%);
+}
+
+.box:nth-child(10)::before {
+  content: 'a';
+  transform: translateY(-100%);
+}
+
+.box:nth-child(11)::before {
+  content: 'r';
+  transform: translateY(100%);
+}
+
+.button:hover .box:before {
+  transform: translateY(0);
 }

@@ -19,35 +19,46 @@ const Hero = () => {
         {/* Social Icons */}
         <div className="hidden lg:block">
           <div className="flex md:flex-col justify-center gap-4 mt-8 animate-slideUp animation-delay-500 md:absolute md:top-60 md:right-60">
-            <a
-              href="https://www.linkedin.com/in/sayedanwartamim"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-gray-600 p-3 border rounded-full hover:text-[#a2d81b] transition-all transform hover:scale-110"
-            >
-              <FaLinkedinIn className="text-base" />
-            </a>
-            <a
-              href="mailto:sayedanwarofficial@gmail.com"
-              target="_blank"
-              className="text-gray-600 p-3 border rounded-full hover:text-[#a2d81b] transition-all transform hover:scale-110"
-            >
-              <AiOutlineMail className="text-base" />
-            </a>
-            <a
-              href="https://github.com/SayedAnwar-07"
-              target="_blank"
-              className="text-gray-600 p-3 border rounded-full hover:text-[#a2d81b] transition-all transform hover:scale-110"
-            >
-              <FaGithub className="text-base" />
-            </a>
-            <a
-              href="https://wa.me/8801903636076"
-              target="_blank"
-              className="text-gray-600 p-3 border rounded-full hover:text-[#a2d81b] transition-all transform hover:scale-110"
-            >
-              <FaWhatsapp className="text-base" />
-            </a>
+            <div className="tooltip tooltip-left" data-tip="Linkedin">
+              <a
+                href="https://www.linkedin.com/in/sayedanwartamim"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-600 hover:text-[#a2d81b] transition-all transform hover:scale-110"
+              >
+                <FaLinkedinIn className="text-2xl mb-2" />
+              </a>
+            </div>
+
+            <div className="tooltip tooltip-left" data-tip="Gmail">
+              <a
+                href="mailto:sayedanwarofficial@gmail.com"
+                target="_blank"
+                className="text-gray-600 hover:text-[#a2d81b] transition-all transform hover:scale-110"
+              >
+                <AiOutlineMail className="text-2xl mb-2" />
+              </a>
+            </div>
+
+            <div className="tooltip tooltip-left" data-tip="Github">
+              <a
+                href="https://github.com/SayedAnwar-07"
+                target="_blank"
+                className="text-gray-600 hover:text-[#a2d81b] transition-all transform hover:scale-110"
+              >
+                <FaGithub className="text-2xl mb-2" />
+              </a>
+            </div>
+
+            <div className="tooltip tooltip-left" data-tip="Whatsapp">
+              <a
+                href="https://wa.me/8801903636076"
+                target="_blank"
+                className="text-gray-600 hover:text-[#a2d81b] transition-all transform hover:scale-110"
+              >
+                <FaWhatsapp className="text-2xl mb-2" />
+              </a>
+            </div>
           </div>
         </div>
 
@@ -84,15 +95,15 @@ const Hero = () => {
               to="contact"
               smooth={true}
               duration={500}
-              className="px-6 py-3 amazing-button text-white rounded-lg font-medium text-sm md:text-base cursor-pointer"
+              className="px-6 py-3 border border-gray-300 rounded-lg hover:bg-gray-50 transition-all font-medium text-sm md:text-base cursor-pointer text-gray-900"
             >
               Get in Touch
             </Link>
             <a
-              href="https://drive.google.com/file/d/1At12QG1x52aOJJNnSK0xOCe0ZLxaSxWx/view"
+              href="https://drive.google.com/file/d/1JeYJETyN1FUXVpEcetosDTuouSIaO-tC/view"
               target="_blank"
               rel="noopener noreferrer"
-              className="px-6 py-3 border border-gray-300 rounded-lg hover:bg-gray-50 transition-all font-medium text-sm md:text-base cursor-pointer text-gray-900"
+              className="px-6 py-3 amazing-button text-white rounded-lg font-medium text-sm md:text-base cursor-pointer"
             >
               Resume
             </a>
