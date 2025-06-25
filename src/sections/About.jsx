@@ -62,26 +62,77 @@ const About = () => {
         </motion.div>
         <div className="grid grid-cols-1 gap-4 md:grid-cols-6 md:auto-rows-[18rem] mt-12">
           {/* Grid 1 */}
-          <div className="flex items-end p-6 bg-gradient-to-b from-gray-400 to-gray-700 rounded-2xl border border-gray-200 grid-1">
-            <img
-              src="assets/coding3.webp"
-              className="absolute scale-[1.75] -right-[5rem] -top-[1rem] md:scale-[3] md:left-50 md:inset-y-10 lg:scale-[2.5] opacity-50"
-            />
-            <div className="z-10">
-              <p className="text-gray-300 ">
-                Hi, I'm <strong>Sayed Anwar</strong>{" "}
-              </p>
-              <p className="subtext">
-                Over the last 2 years, I developed my frontend developer skilled
-                in React.js, HTML, CSS, and JavaScript, with a focus on building
-                responsive and engaging user interfaces. Experienced in
-                integrating Django REST APIs and MySQL to develop dynamic
-                full-stack web applications. Passionate about turning designs
-                into smooth, functional user experiences.
-              </p>
+          <div className="relative p-8 bg-gradient-to-br from-gray-700 via-black to-[#aada30] rounded-3xl border border-gray-700 overflow-hidden shadow-[0_10px_40px_-15px_rgba(0,0,0,0.5)] hover:shadow-[0_20px_50px_-15px_rgba(99,102,241,0.3)] transition-all duration-500 grid-1 group">
+            {/* Dynamic background elements */}
+            <div className="absolute inset-0 opacity-30">
+              <div className="absolute w-40 h-40 rounded-full bg-green-500 -top-16 -left-16 blur-3xl animate-float-slow"></div>
+              <div className="absolute w-56 h-56 rounded-full bg-teal-600 -bottom-24 -right-24 blur-3xl animate-float-medium"></div>
             </div>
-            <div className="absolute inset-x-0 pointer-evets-none -bottom-4 h-1/2 sm:h-1/3 bg-gradient-to-t from-indigo" />
+
+            {/* Interactive grid pattern */}
+            <div className="absolute inset-0 opacity-5 [mask-image:radial-gradient(ellipse_at_center,white,transparent_70%)]">
+              <div className="absolute inset-0 bg-[size:30px_30px] [background-image:linear-gradient(to_right,rgba(255,255,255,0.1)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.1)_1px,transparent_1px)] group-hover:bg-[size:40px_40px] transition-all duration-700"></div>
+            </div>
+            {/* Main content with animated entry */}
+            <div className="relative z-10 max-w-[55%] space-y-5">
+              <div className="overflow-hidden">
+                <p className="text-gray-300 text-lg font-medium mb-1 translate-y-0 opacity-100 transition-all duration-500 group-hover:-translate-y-1">
+                  Hello! I'm
+                </p>
+              </div>
+
+              <div className="overflow-hidden">
+                <h1 className="text-3xl font-bold bg-gradient-to-r from-[#aada30] to-teal-400 bg-clip-text text-transparent mb-2 translate-y-0 opacity-100 transition-all duration-500 delay-75 group-hover:-translate-y-1">
+                  Sayed Anwar
+                </h1>
+              </div>
+
+              <div className="overflow-hidden">
+                <p className="text-gray-300 text-sm sm:text-base leading-relaxed translate-y-0 opacity-100 transition-all duration-500 delay-100 group-hover:-translate-y-1">
+                  Frontend Developer crafting pixel-perfect, responsive web
+                  experiences with React.js and modern JavaScript.
+                </p>
+              </div>
+
+              {/* Interactive skill chips */}
+              <div className="flex flex-wrap gap-2 mt-4">
+                {[
+                  "React.js",
+                  "TypeScript",
+                  "Tailwind CSS",
+                  "Django REST",
+                  "Figma",
+                  "Jest",
+                ].map((skill, i) => (
+                  <span
+                    key={skill}
+                    className="px-3 py-1.5 bg-gray-800/50 border border-gray-700 rounded-full text-xs font-medium text-white hover:bg-indigo-500/20 hover:border-indigo-400 hover:text-indigo-100 hover:scale-105 transition-all duration-300 cursor-default"
+                    style={{ transitionDelay: `${150 + i * 50}ms` }}
+                  >
+                    {skill}
+                  </span>
+                ))}
+              </div>
+            </div>
+            {/* Floating particles effect */}
+            <div className="absolute inset-0 overflow-hidden rounded-3xl pointer-events-none">
+              {[...Array(15)].map((_, i) => (
+                <div
+                  key={i}
+                  className="absolute w-1 h-1 bg-white rounded-full opacity-20"
+                  style={{
+                    top: `${Math.random() * 100}%`,
+                    left: `${Math.random() * 100}%`,
+                    animation: `float ${
+                      5 + Math.random() * 10
+                    }s linear infinite`,
+                    animationDelay: `${Math.random() * 5}s`,
+                  }}
+                ></div>
+              ))}
+            </div>
           </div>
+
           {/* Grid 2 */}
           <div className="grid-default-color border border-gray-200 grid-2">
             <div

@@ -242,7 +242,7 @@ body {
   transition: all .8s;
   cursor: pointer;
   position: relative;
-  background: #abdd2c;
+  background: #0f0f0f;
   overflow: hidden;
 }
 
@@ -258,7 +258,8 @@ body {
   content: "S";
   position: absolute;
   top: 0;
-  background: #0f0f0f;
+  color:#0f0f0f;
+  background: #abdd2c;
   width: 100%;
   height: 100%;
   display: flex;
