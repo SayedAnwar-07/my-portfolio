@@ -92,20 +92,21 @@ const Navbar = () => {
     >
       <div className="mx-auto c-space max-w-7xl">
         <div className="flex items-center justify-between py-2 sm:py-0">
-          
-          <div className="button">
-            <div className="box">S</div>
-            <div className="box">a</div>
-            <div className="box">y</div>
-            <div className="box">e</div>
-            <div className="box">d</div>
-            <div className="box"> </div>
-            <div className="box">A</div>
-            <div className="box">n</div>
-            <div className="box">w</div>
-            <div className="box">a</div>
-            <div className="box">r</div>
-          </div>
+          <a href="/">
+            <div className="button">
+              <div className="box">S</div>
+              <div className="box">a</div>
+              <div className="box">y</div>
+              <div className="box">e</div>
+              <div className="box">d</div>
+              <div className="box"> </div>
+              <div className="box">A</div>
+              <div className="box">n</div>
+              <div className="box">w</div>
+              <div className="box">a</div>
+              <div className="box">r</div>
+            </div>
+          </a>
 
           <button
             onClick={() => setIsOpen(!isOpen)}

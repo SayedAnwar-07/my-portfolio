@@ -98,7 +98,7 @@ const Projects = () => {
         {/* Preview Hover Image */}
         {preview && (
           <motion.img
-            className="fixed top-0 left-0 z-50 object-cover h-56 rounded-lg shadow-2xl pointer-events-none w-80"
+            className="fixed top-0 left-0 z-50 rounded-lg shadow-2xl pointer-events-none w-96 h-72"
             src={preview}
             style={{ x: springX, y: springY }}
             initial={{ opacity: 0 }}

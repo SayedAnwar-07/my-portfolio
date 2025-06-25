@@ -231,7 +231,7 @@ body {
 
 .box {
   width: 20px;
-  border: 1px solid #ffffff00;
+  border: 1px solid #ffffff;
   height: 25px;
   display: flex;
   justify-content: center;
@@ -244,6 +244,14 @@ body {
   position: relative;
   background: #abdd2c;
   overflow: hidden;
+}
+
+/* Specific style for the space box (6th child) */
+.box:nth-child(6) {
+  background: transparent;
+  border: none;
+  cursor: default;
+  width: 8px; 
 }
 
 .box:before {
@@ -281,9 +289,10 @@ body {
 }
 
 .box:nth-child(6)::before {
-  background: #f1f1ea;
   content: '';
-  transform: translateY(-100%);
+  background: transparent;
+  transform: none;
+  transition: none;
 }
 
 .box:nth-child(7)::before {
@@ -313,4 +322,9 @@ body {
 
 .button:hover .box:before {
   transform: translateY(0);
+}
+
+/* Disable hover effect for the space box */
+.button:hover .box:nth-child(6)::before {
+  transform: none;
 }

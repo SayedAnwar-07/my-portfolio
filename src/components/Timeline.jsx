@@ -72,11 +72,11 @@ export const Timeline = ({ data }) => {
           variants={itemVariants}
           className="text-3xl sm:text-4xl font-bold text-gray-900"
         >
-          Learning Journey
+          Learning Experience
         </motion.h2>
         <motion.div
           variants={itemVariants}
-          className="w-40 h-1 bg-green mx-auto mt-4 rounded-full"
+          className="w-80 h-1 bg-green mx-auto mt-4 rounded-full"
         ></motion.div>
         <motion.p
           variants={itemVariants}

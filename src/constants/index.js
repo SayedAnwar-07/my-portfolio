@@ -23,13 +23,22 @@ import vercelLogo from "../assets/tech_logo/vercel.png";
 import django from "../assets/tech_logo/django-icon.svg";
 import wp from "../assets/tech_logo/wp.png";
 import chatGPT from "../assets/tech_logo/chatGPT.png";
+// import acf from "../assets/tech_logo/ACF.png";
+// import contact_form from "../assets/tech_logo/contact_form.png";
+// import elementor from "../assets/tech_logo/Elementor.png";
+// import yoast from "../assets/tech_logo/Yoast_SEO.png";
+
+// skills image
+import neonstich from "../../public/assets/skill/NeonStich.png";
+import blog from "../../public/assets/skill/Blog.png";
+import jobPortal from "../../public/assets/skill/JobPortal.png";
+import taken from "../../public/assets/skill/TAKE-N.png";
+import gearovo from "../../public/assets/skill/Gearovo.png";
 
 // Experience Section Logo's
 import ph from "../../public/assets/logos/ph.png";
 import ostad from "../../public/assets/logos/ostad.png";
 import sorobindu from "../assets/company_logo/sorobindu.png";
-
-
 
 export const myProjects = [
   {
@@ -47,7 +56,7 @@ export const myProjects = [
     githubLink: "https://github.com/SayedAnwar-07/JobPortal",
     href: "",
     logo: "",
-    image: "https://i.ibb.co.com/KzSdL1ZG/Job-Portal.png",
+    image: jobPortal,
     tags: [
       {
         id: 1,
@@ -86,7 +95,7 @@ export const myProjects = [
     githubLink: "https://github.com/SayedAnwar-07/NeonStich",
     href: "",
     logo: "",
-    image: "https://i.ibb.co.com/Qvh6Kp62/Neon-Stich.png",
+    image: neonstich,
     tags: [
       {
         id: 1,
@@ -125,7 +134,7 @@ export const myProjects = [
     githubLink: "https://github.com/SayedAnwar-07/Take-N",
     href: "",
     logo: "",
-    image: "https://i.ibb.co.com/0RFw7vxt/TAKE-N.png",
+    image: taken,
     tags: [
       {
         id: 1,
@@ -169,7 +178,7 @@ export const myProjects = [
     githubLink: "https://github.com/SayedAnwar-07/My_Blog",
     href: "",
     logo: "",
-    image: "https://i.ibb.co.com/nNR9qMgS/Blog.png",
+    image: blog,
     tags: [
       {
         id: 1,
@@ -195,38 +204,43 @@ export const myProjects = [
   },
   {
     id: 5,
-    title: "WordPress Custom Theme",
+    title: "Gearovo E-commerce Platform",
     description:
-      "A fully customizable WordPress theme optimized for performance and SEO.",
+      "Gearovo is a fully functional e-commerce website developed using WordPress. It features a custom-designed theme built with Elementor, integrated with WooCommerce for product and order management. The site supports Stripe and PayPal for secure transactions, and includes responsive design, caching, and SEO optimization to deliver a smooth shopping experience across all devices.",
     subDescription: [
-      "Developed a responsive WordPress theme using HTML5, CSS3, and JavaScript.",
-      "Integrated Tailwind CSS for modern styling and UI enhancements.",
-      "Optimized SEO and page speed using Vite.js for fast builds.",
-      "Implemented custom widgets and plugin compatibility for extended functionality.",
+      "Designed and developed a custom WordPress theme tailored for Gearovo.",
+      "Leveraged Elementor for flexible, drag-and-drop layout customization.",
+      "Integrated WooCommerce for complete e-commerce functionality.",
+      "Enhanced performance with caching tools and SEO optimization plugins.",
     ],
-    href: "",
+    href: "https://gearovo.com/",
     logo: "",
-    image: "/assets/tech_logocts/wordpress-theme.jpg",
+    image: gearovo,
     tags: [
       {
         id: 1,
-        name: "WordPress",
-        path: "/assets/tech_logo/wordpress.svg",
+        name: "ACF",
+        path: "/assets/tech_logo/ACF.png",
       },
       {
         id: 2,
-        name: "HTML5",
-        path: "/assets/tech_logo/html5.svg",
+        name: "Yoast_SEO",
+        path: "/assets/tech_logo/contact_form.png",
       },
       {
         id: 3,
-        name: "CSS3",
-        path: "/assets/tech_logo/css3.svg",
+        name: "Elementor",
+        path: "/assets/tech_logo/Elementor.png",
       },
       {
         id: 4,
-        name: "Vite.js",
-        path: "/assets/tech_logo/vitejs.svg",
+        name: "WordPress",
+        path: "assets/tech_logo/wp.png",
+      },
+      {
+        id: 5,
+        name: "Yoast_SEO",
+        path: "/assets/tech_logo/Yoast_SEO.png",
       },
     ],
   },
