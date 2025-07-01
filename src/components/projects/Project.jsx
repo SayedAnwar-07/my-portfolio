@@ -4,6 +4,7 @@ import ProjectDetails from "./ProjectDetails";
 
 const Project = ({
   title,
+  timeline,
   description,
   subDescription,
   href,
@@ -28,6 +29,7 @@ const Project = ({
         {/* Left: Title & Tags */}
         <div className="space-y-3">
           <h2 className="text-xl sm:text-2xl font-semibold">{title}</h2>
+          <p className="text-sm font-medium">{timeline}</p>
           <div className="flex flex-wrap gap-2 text-xs sm:text-sm text-gray-700">
             {tags.map((tag) => (
               <span

@@ -34,6 +34,7 @@ import blog from "../../public/assets/skill/Blog.png";
 import jobPortal from "../../public/assets/skill/JobPortal.png";
 import taken from "../../public/assets/skill/TAKE-N.png";
 import gearovo from "../../public/assets/skill/Gearovo.png";
+import medhakosh from "../../public/assets/skill/The_Medhakosh.png";
 
 // Experience Section Logo's
 import ph from "../../public/assets/logos/ph.png";
@@ -43,20 +44,22 @@ import sorobindu from "../assets/company_logo/sorobindu.png";
 export const myProjects = [
   {
     id: 1,
-    title: "JobPortal",
+    title: "The Medhakosh - Online Learning Platform",
+    timeline: "May - June, 2025",
     description:
-      "A MERN-based job portal with role-based authentication and job listings.",
+      "Developed a full-featured online learning platform enabling students to enroll and track courses, and teachers to manage content with ease.",
     subDescription: [
-      "Developed a full-stack job portal using the MERN stack (MongoDB, Express.js, React, Node.js) with scalable architecture.",
-      "Implemented role-based authentication for admins, recruiters, and job seekers using JWT and middleware.",
-      "Built dynamic job listing and search features with filtering, sorting, and pagination.",
-      "Integrated secure user registration, login, and profile management with form validation and bcrypt hashing.",
-      "Designed a responsive, intuitive UI with Tailwind CSS to ensure a seamless experience across devices.",
+      "Developed a full-featured online learning platform using React.js (Vite) and Django REST Framework.",
+      "Implemented secure JWT-based authentication with role-specific access for students and teachers.",
+      "Enabled students to enroll in courses, track progress, and make secure payments via Stripe.",
+      "Designed a robust teacher dashboard for course, module, and lesson management.",
+      "Used shadcn UI and TailwindCSS for a clean, modern, and mobile-responsive interface.",
+      "Managed state using Redux Toolkit and validated forms and schemas with Zod.",
     ],
-    githubLink: "https://github.com/SayedAnwar-07/JobPortal",
+    githubLink: "https://github.com/SayedAnwar-07/LMS_projects",
     href: "",
     logo: "",
-    image: jobPortal,
+    image: medhakosh,
     tags: [
       {
         id: 1,
@@ -65,24 +68,30 @@ export const myProjects = [
       },
       {
         id: 2,
-        name: "Redux",
-        path: "/assets/tech_logo/redux.png",
+        name: "Django",
+        path: "/assets/tech_logo/django.png",
       },
       {
         id: 3,
-        name: "Express",
-        path: "/assets/tech_logo/express.png",
+        name: "TailwindCSS",
+        path: "/assets/tech_logo/tailwindcss.png",
       },
       {
         id: 4,
-        name: "TailwindCSS",
-        path: "/assets/tech_logo/tailwindcss.png",
+        name: "Redux Toolkit",
+        path: "/assets/tech_logo/redux.png",
+      },
+      {
+        id: 5,
+        name: "Stripe",
+        path: "/assets/tech_logo/stripe.jpeg",
       },
     ],
   },
   {
     id: 2,
     title: "NeonStich (Cloths E-commerce)",
+    timeline: "December - January, 2024",
     description:
       "Built a feature-rich clothing e-commerce platform using the MERN stack with RESTful APIs for product and cart management.",
     subDescription: [
@@ -121,7 +130,51 @@ export const myProjects = [
   },
   {
     id: 3,
+    title: "Gearovo E-commerce Platform",
+    timeline: "October - November, 2024",
+    description:
+      "Gearovo is a fully functional e-commerce website developed using WordPress. It features a custom-designed theme built with Elementor, integrated with WooCommerce for product and order management. The site supports Stripe and PayPal for secure transactions, and includes responsive design, caching, and SEO optimization to deliver a smooth shopping experience across all devices.",
+    subDescription: [
+      "Designed and developed a custom WordPress theme tailored for Gearovo.",
+      "Leveraged Elementor for flexible, drag-and-drop layout customization.",
+      "Integrated WooCommerce for complete e-commerce functionality.",
+      "Enhanced performance with caching tools and SEO optimization plugins.",
+    ],
+    href: "https://gearovo.com/",
+    logo: "",
+    image: gearovo,
+    tags: [
+      {
+        id: 1,
+        name: "ACF",
+        path: "/assets/tech_logo/ACF.png",
+      },
+      {
+        id: 2,
+        name: "Yoast_SEO",
+        path: "/assets/tech_logo/contact_form.png",
+      },
+      {
+        id: 3,
+        name: "Elementor",
+        path: "/assets/tech_logo/Elementor.png",
+      },
+      {
+        id: 4,
+        name: "WordPress",
+        path: "assets/tech_logo/wp.png",
+      },
+      {
+        id: 5,
+        name: "Yoast_SEO",
+        path: "/assets/tech_logo/Yoast_SEO.png",
+      },
+    ],
+  },
+  {
+    id: 4,
     title: "Take-N (Accessories E-commerce)",
+    timeline: "May - June, 2024",
     description:
       "Developed an accessories e-commerce application using the MERN stack with modular and scalable code structure.",
     subDescription: [
@@ -164,8 +217,9 @@ export const myProjects = [
     ],
   },
   {
-    id: 4,
+    id: 5,
     title: "My_Blog",
+    timeline: "April - May, 2024",
     description:
       "Developed a personal blogging platform using Django with a clean, modular architecture.",
     subDescription: [
@@ -203,44 +257,42 @@ export const myProjects = [
     ],
   },
   {
-    id: 5,
-    title: "Gearovo E-commerce Platform",
+    id: 6,
+    title: "JobPortal",
+    timeline: "November - December, 2023",
     description:
-      "Gearovo is a fully functional e-commerce website developed using WordPress. It features a custom-designed theme built with Elementor, integrated with WooCommerce for product and order management. The site supports Stripe and PayPal for secure transactions, and includes responsive design, caching, and SEO optimization to deliver a smooth shopping experience across all devices.",
+      "A MERN-based job portal with role-based authentication and job listings.",
     subDescription: [
-      "Designed and developed a custom WordPress theme tailored for Gearovo.",
-      "Leveraged Elementor for flexible, drag-and-drop layout customization.",
-      "Integrated WooCommerce for complete e-commerce functionality.",
-      "Enhanced performance with caching tools and SEO optimization plugins.",
+      "Developed a full-stack job portal using the MERN stack (MongoDB, Express.js, React, Node.js) with scalable architecture.",
+      "Implemented role-based authentication for admins, recruiters, and job seekers using JWT and middleware.",
+      "Built dynamic job listing and search features with filtering, sorting, and pagination.",
+      "Integrated secure user registration, login, and profile management with form validation and bcrypt hashing.",
+      "Designed a responsive, intuitive UI with Tailwind CSS to ensure a seamless experience across devices.",
     ],
-    href: "https://gearovo.com/",
+    githubLink: "https://github.com/SayedAnwar-07/JobPortal",
+    href: "",
     logo: "",
-    image: gearovo,
+    image: jobPortal,
     tags: [
       {
         id: 1,
-        name: "ACF",
-        path: "/assets/tech_logo/ACF.png",
+        name: "React Js",
+        path: "/assets/tech_logo/reactjs.png",
       },
       {
         id: 2,
-        name: "Yoast_SEO",
-        path: "/assets/tech_logo/contact_form.png",
+        name: "Redux",
+        path: "/assets/tech_logo/redux.png",
       },
       {
         id: 3,
-        name: "Elementor",
-        path: "/assets/tech_logo/Elementor.png",
+        name: "Express",
+        path: "/assets/tech_logo/express.png",
       },
       {
         id: 4,
-        name: "WordPress",
-        path: "assets/tech_logo/wp.png",
-      },
-      {
-        id: 5,
-        name: "Yoast_SEO",
-        path: "/assets/tech_logo/Yoast_SEO.png",
+        name: "TailwindCSS",
+        path: "/assets/tech_logo/tailwindcss.png",
       },
     ],
   },
